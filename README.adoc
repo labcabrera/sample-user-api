@@ -4,8 +4,6 @@
 
 image:https://img.shields.io/badge/License-GPL3.0-green.svg[License,link="https://www.gnu.org/licenses/gpl-3.0.html"]
 image:https://img.shields.io/badge/SpringBoot-3.5.7-green.svg[Spring Boot 3.5.7,link="https://spring.io/projects/spring-boot"]
-image:https://img.shields.io/badge/SpringCloudStream-2025.0.0-green.svg[Spring Cloud Stream 2025.0.0,link="https://spring.io/blog/2025/05/29/spring-cloud-2025-0-0-is-abvailable"]
-image:https://img.shields.io/badge/Kafka-3.4-green.svg[Kafka 3.4,link="https://kafka.apache.org/34/documentation/"]
 
 ++++
 <a href="https://www.postman.com/labcabrera/workspace/rmu-engine/collection/5547717-88042a4f-67ac-4676-8077-dc1d64497fb3?action=share&creator=5547717&active-environment=5547717-d961abf9-48b5-43f6-9138-512bd09d0454" target="_blank">

@@ -1,4 +1,4 @@
-= Prototipo de Arquetipo para Spring Boot con Clean Architecture y Spring Cloud Stream usando Vertical Slices
+= Ejemplo de API REST con Spring Boot para la integración con otros proyectos
 :linkattrs:
 :icons: font
 

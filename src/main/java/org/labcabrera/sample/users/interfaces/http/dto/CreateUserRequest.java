@@ -1,5 +1,10 @@
 package org.labcabrera.sample.users.interfaces.http.dto;
 
-public record CreateUserRequest(String name) {
+import jakarta.validation.constraints.NotBlank;
 
+public record CreateUserRequest(
+
+    @NotBlank String name
+
+) {
 }

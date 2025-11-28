@@ -1,6 +1,7 @@
 package org.labcabrera.sample.users.domain;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -28,12 +29,12 @@ public class User {
     @NotNull
     private LocalDateTime createdAt;
 
-    @NotNull
     private LocalDateTime updatedAt;
 
     public static User create(String name, String createdBy) {
         LocalDateTime now = LocalDateTime.now();
         return User.builder()
+            .id(UUID.randomUUID().toString())
             .name(name)
             .createdBy(createdBy)
             .createdAt(now)

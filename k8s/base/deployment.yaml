@@ -25,17 +25,17 @@ spec:
         - name: LOG_LEVEL
           valueFrom:
             configMapKeyRef:
-              name: sample-config
+              name: sample-users-api-config
               key: log_level
         - name: JAVA_OPTS
           valueFrom:
             configMapKeyRef:
-              name: sample-config
+              name: sample-users-api-config
               key: java_opts
         - name: FOO_SECRET
           valueFrom:
             secretKeyRef:
-              name: sample-secret
+              name: sample-users-api-secret
               key: foo
         imagePullPolicy: Always
         ports:

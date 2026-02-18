@@ -5,15 +5,6 @@ resources:
   - service.yaml
   - ingress.yaml
   - cert.yaml
-
-configMapGenerator:
-- name: sample-users-api-config
-  behavior: create
-  literals:
-  - java_opts=-Xms512m -Xmx1024m
-  - log_level=INFO
-secretGenerator:
-- name: sample-users-api-secret
-  behavior: create
-  literals:
-  - foo=foosecret
+  - configmap.yaml
+  - secret.yaml
+# ConfigMap and Secret provided as manifest files: configmap.yaml, secret.yaml

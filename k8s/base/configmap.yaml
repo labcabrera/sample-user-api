@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sample-users-api-config
+data:
+  java_opts: "-Xms512m -Xmx1024m"
+  log_level: "INFO"

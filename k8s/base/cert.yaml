@@ -1,14 +1,14 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: sample-user-api
+  name: sample-users-api
 spec:
-  secretName: sample-user-api-tls
+  secretName: sample-users-api-tls
   duration: 2160h # 90 days
   renewBefore: 360h # 15 days
   issuerRef:
     name: template-root-ca
     kind: ClusterIssuer
-  commonName: sample-user-api.local
+  commonName: sample-users-api.local
   dnsNames:
-    - sample-user-api.local
+    - sample-users-api.local

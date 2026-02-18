@@ -5,7 +5,7 @@ resources:
 patches:
   - target:
       kind: Deployment
-      name: sample-user-api
+      name: sample-users-api
     patch: |-
       - op: replace
         path: /spec/replicas

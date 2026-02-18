@@ -7,13 +7,13 @@ resources:
   - cert.yaml
 
 configMapGenerator:
-- name: sample-user-api-config
+- name: sample-users-api-config
   behavior: create
   literals:
   - java_opts=-Xms512m -Xmx1024m
   - log_level=INFO
 secretGenerator:
-- name: sample-user-api-secret
+- name: sample-users-api-secret
   behavior: create
   literals:
   - foo=foosecret

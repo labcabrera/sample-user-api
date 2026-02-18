@@ -1,14 +1,14 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: archetype-spring-cloud-stream-vertical-slice-cert
+  name: sample-user-api
 spec:
-  secretName: archetype-spring-cloud-stream-vertical-slice-tls
+  secretName: sample-user-api-tls
   duration: 2160h # 90 days
   renewBefore: 360h # 15 days
   issuerRef:
-    name: sample-root-ca
+    name: template-root-ca
     kind: ClusterIssuer
-  commonName: archetype-spring-cloud-stream-vertical-slice.local
+  commonName: sample-user-api.local
   dnsNames:
-    - archetype-spring-cloud-stream-vertical-slice.local
+    - sample-user-api.local

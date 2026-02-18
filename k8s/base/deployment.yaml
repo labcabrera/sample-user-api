@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: archetype-spring-cloud-stream-vertical-slice
+  name: sample-user-api
   labels:
-    k8s-app: archetype-spring-cloud-stream-vertical-slice
+    k8s-app: sample-user-api
 spec:
   replicas: 2
   selector:
     matchLabels:
-      k8s-app: archetype-spring-cloud-stream-vertical-slice
+      k8s-app: sample-user-api
   template:
     metadata:
       labels:
-        k8s-app: archetype-spring-cloud-stream-vertical-slice
+        k8s-app: sample-user-api
     spec:
       imagePullSecrets:
       - name: registrykey
       containers:
-      - name: archetype-spring-cloud-stream-vertical-slice
-        image: labcabrera/archetype-spring-cloud-stream-vertical-slice:latest
+      - name: sample-user-api
+        image: labcabrera/sample-user-api:latest
         env:
         - name: TZ
           value: Europe/Madrid

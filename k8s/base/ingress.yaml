@@ -1,24 +1,24 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: archetype-spring-cloud-stream-vertical-slice
+  name: sample-user-api
   annotations:
     kubernetes.io/ingress.className: nginx-ingress
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - archetype-spring-cloud-stream-vertical-slice.local
-      secretName: archetype-spring-cloud-stream-vertical-slice-tls
+        - sample-user-api.local
+      secretName: sample-user-api-tls
   rules:
-    - host: archetype-spring-cloud-stream-vertical-slice.local
+    - host: sample-user-api.local
       http:
         paths:
           - path: /
             pathType: ImplementationSpecific
             backend:
               service:
-                name: archetype-spring-cloud-stream-vertical-slice
+                name: sample-user-api
                 port:
                   number: 80
 

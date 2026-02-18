@@ -5,7 +5,7 @@ resources:
 patches:
   - target:
       kind: Deployment
-      name: archetype-spring-cloud-stream-vertical-slice
+      name: sample-user-api
     patch: |-
       - op: replace
         path: /spec/replicas

@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'org.labcabrera.sample'
-version = '0.1.0-SNAPSHOT'
+version = version
 description = 'Sample User API for basic REST Integration'
 
 ext {
@@ -22,7 +22,7 @@ ext {
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(25)
 	}
 }
 
@@ -75,11 +75,6 @@ jacocoTestReport {
 		xml.required = true
 		html.required = true
 	}
-}
-
-tasks.withType(JavaCompile).configureEach {
-	options.annotationProcessorGeneratedSourcesDirectory = file("$buildDir/generated/sources/annotations")
-	options.compilerArgs += ["-Amapstruct.defaultComponentModel=spring"]
 }
 
 jar {

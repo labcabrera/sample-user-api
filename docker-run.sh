@@ -14,9 +14,9 @@ docker build -t labcabrera/sample-users-api:latest .
 
 echo "Running sample-users-api container..."
 
-docker run -d --name sample-users-api --network sample-network -p 8083:8083 \
+docker run -d --name sample-users-api -p 8083:8083 \
   -e JAVA_OPTS="-Xms512m -Xmx1024m" \
-  -e IAM_JWK_URI="http://sample-keycloak:8080/realms/sample/protocol/openid-connect/certs" \
+  -e IAM_JWK_URI="http://localhost:8090/realms/archetype-realm/protocol/openid-connect/certs" \
   labcabrera/sample-users-api:latest
 
 docker logs -f sample-users-api
